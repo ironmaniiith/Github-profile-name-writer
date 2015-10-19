@@ -38,7 +38,7 @@ For help, here are two screenshots
 #### Is this a useful thing..?####
 * No not at all.. hahhahahahahaha. :D, it's just for fun and for making your github profile awesome, go see this link -> https://github.com/ironmaniiith
 
-#### If you are in college and your college don't allow ssh to github, follow this :-####
+#### If you are in college and your college don't allow ssh to github, follow this####
 * Suppose you username is 'ironman' and password is 'blabla'
 	Just run this in you local copy of repo
 	git remote add origin "https://ironman:blabla@github.com/ironman/testRepo.git" (where testRepo is the name of you repository)
