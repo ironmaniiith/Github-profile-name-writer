@@ -48,7 +48,7 @@ for word in name:
 		text = "arr" + word.upper()
 
 	if text != ' ':
-		increment = eval('increment' + word)
+		increment = eval('increment' + word.upper())
 		print word
 		myArray = eval(text)
 		for i in myArray:
