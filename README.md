@@ -1,5 +1,6 @@
 # Github-profile-name-writer
 ###Write you name using the github commits and make your profile awesome. :D###
+##LIKE THIS##
 ![Image of Ironman on github Profile](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/ironmanGithub.jpg)
 
 ####If you don't enjoy reading, then just follow this and enjoy. :D
@@ -21,7 +22,9 @@ For other related queries refer this
 	For help, here are two screenshots
 
 	1. Base date (Your name will appear above this date's level)
+	![Image of Base Date](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/baseDate.jpg)
 	2. Inspect Element to find date.
+	![Image of Inspect Date](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/inspectDate.jpg)
 
 
 #### What is I want to change the pattern of some alphabets.####
