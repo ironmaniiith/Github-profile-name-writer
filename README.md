@@ -1,8 +1,8 @@
 # Github-profile-name-writer
 ###Write you name using the github commits and make your profile awesome. :D###
+![Image of Ironman on github Profile](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/ironmanGithub.jpg)
 
-
-####If you don't enjoying reading, then just follow this and enjoy. :D
+####If you don't enjoy reading, then just follow this and enjoy. :D
 
 1.	Make a new repo (say testRepo)
 2.	Run the file run.sh, it will ask you the information like username and id, enter it.
@@ -33,7 +33,7 @@ For other related queries refer this
 
 
 #### Is this a useful thing..?####
-	+ No not at all.. hahhahahahahaha. :D, it's just for fun and for making you github profile awesome, go see this link -> https://github.com/ironmaniiith
+	+ No not at all.. hahhahahahahaha. :D, it's just for fun and for making your github profile awesome, go see this link -> https://github.com/ironmaniiith
 
 #### If you are in college and your college don't allow ssh to github, follow this :-####
 	+ Suppose you username is 'ironman' and password is 'blabla'
