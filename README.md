@@ -18,7 +18,9 @@ For other related queries refer this
 
 #### How to select date from which I want to start writing my name####
 * That's simple, go to you profile page and select a base block from which you want to start writing your name, just inspect element it, you will see a value for data-date, this is it.
-The first quantity if year, second is month and third is date, just add these info when you run the script run.sh
+
+The first quantity is year, second is month and third is date, just add these info when you run the script run.sh
+
 For help, here are two screenshots
 
 1. Base date (Your name will appear above this date's level)
@@ -40,8 +42,11 @@ For help, here are two screenshots
 
 #### If you are in college and your college don't allow ssh to github, follow this####
 * Suppose you username is 'ironman' and password is 'blabla'
-	Just run this in you local copy of repo
+	
+	Just run this in you local copy of the repository
+
 	git remote add origin "https://ironman:blabla@github.com/ironman/testRepo.git" (where testRepo is the name of you repository)
+	
 	Now just run the final script runThis.sh, it won't ask for the password
 
 #### What more.?####
