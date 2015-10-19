@@ -1,6 +1,6 @@
 # Github-profile-name-writer
 ###Write you name using the github commits and make your profile awesome. :D###
-##LIKE THIS##
+###LIKE THIS###
 ![Image of Ironman on github Profile](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/ironmanGithub.jpg)
 
 ####If you don't enjoy reading, then just follow this and enjoy. :D
