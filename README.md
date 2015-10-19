@@ -27,12 +27,12 @@ For help, here are two screenshots
 ![Image of Inspect Date](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/inspectDate.jpg)
 
 
-#### What is I want to change the pattern of some alphabets.####
+#### What if I want to change the pattern of some alphabets.####
 * Now that's simple, go to the components folder, you will find a file named alphabets, just draw your pattern in that file, run bash parse.sh and that's it, your final output is in finalIndexing.txt, just replace all this obtained value of variables and arrays in the file main.py (replacing the old one). Now what are you waiting for, go and run your newly customized main.py. ;-)
 
 
 #### What about numbers.?####
-* I'll add them soon, but you know, you can also fork the repository, go give it a shot. :D
+* I'll add them soon, but you know what, you can also fork the repository, go give it a shot. :D
 
 
 #### Is this a useful thing..?####
@@ -48,7 +48,9 @@ For help, here are two screenshots
 * Well dude, I'm not a poet or essay writer, so unfortunately you won't find anything more. ;-)
 
 Any suggestions are always welcomed.
+
 Don't forget to star the repo if you like it...
 
 Ironmaniiith
+
 https://github.com/ironmaniiith
