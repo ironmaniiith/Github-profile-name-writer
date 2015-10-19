@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import sys
-alphabet = raw_input()
+text = raw_input()
 numbers = raw_input()
 n = int(numbers.split(' ')[0])
 m = int(numbers.split(' ')[1])
@@ -18,5 +18,12 @@ for i,line in enumerate(arr):
 		if alpha == '*':
 			ans.append(j*7 + index)
 ans.sort()
-print alphabet + " = " + str(ans)
-print alphabet + "Increment = " + str(m+1)
+
+try:
+	number = int(text)
+	print "arr" + text + " = " + str(ans)
+	print "increment" + text + " = " + str(m+1)
+except Exception, e:
+	alphabet = text
+	print "arr" + alphabet + " = " + str(ans)
+	print "increment" + alphabet + " = " + str(m+1)
