@@ -24,11 +24,11 @@ For other related queries refer this
 	2. Inspect Element to find date.
 
 
-####* What is I want to change the pattern of some alphabets.####
+*#### What is I want to change the pattern of some alphabets.####
 	* Now that's simple, go to the components folder, you will find a file named alphabets, just draw your pattern in that file, run bash parse.sh and that's it, your final output is in finalIndexing.txt, just replace all this obtained value of variables and arrays in the file main.py (replacing the old one). Now what are you waiting for, go and run your newly customized main.py. ;-)
 
 
-####* What about numbers.?####
+*#### What about numbers.?####
 	* I'll add them soon, but you know, you can also fork the repository, go give it a shot. :D
 
 
