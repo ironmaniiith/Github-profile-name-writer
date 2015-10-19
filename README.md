@@ -42,7 +42,7 @@ For other related queries refer this
 	Now just run the final script runThis.sh, it won't ask for the password
 
 #### What more.?####
-	+ Well dude, I'm not a poet of essay writer, so unfortunately you won't find anything more. ;-)
+	+ Well dude, I'm not a poet or essay writer, so unfortunately you won't find anything more. ;-)
 
 Any suggestions are always welcomed.
 Don't forget to star the repo if you like it...
