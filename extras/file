@@ -1,0 +1,4 @@
+echo $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM `date` | sha512sum | cut -d ' ' -f1 > testFile
+git add .
+git commit -m 'Just keep going'
+git push -u origin master

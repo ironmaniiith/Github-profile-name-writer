@@ -1,0 +1,1 @@
+for i in `seq 1 8 207 `; do for j in `seq 0 6`; do cat alphabets | awk NR==$(($i+$j));done | py parse.py ;done > finalIndexing.txt
