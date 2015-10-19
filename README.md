@@ -17,14 +17,14 @@ For other related queries refer this
 
 
 #### How to select date from which I want to start writing my name####
-	+ That's simple, go to you profile page and select a base block from which you want to start writing your name, just inspect element it, you will see a value for data-date, this is it.
-	The first quantity if year, second is month and third is date, just add these info when you run the script run.sh
-	For help, here are two screenshots
+That's simple, go to you profile page and select a base block from which you want to start writing your name, just inspect element it, you will see a value for data-date, this is it.
+The first quantity if year, second is month and third is date, just add these info when you run the script run.sh
+For help, here are two screenshots
 
-	1. Base date (Your name will appear above this date's level)
-	![Image of Base Date](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/baseDate.jpg)
-	2. Inspect Element to find date.
-	![Image of Inspect Date](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/inspectDate.jpg)
+1. Base date (Your name will appear above this date's level)
+![Image of Base Date](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/baseDate.jpg)
+2. Inspect Element to find date.
+![Image of Inspect Date](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/inspectDate.jpg)
 
 
 #### What is I want to change the pattern of some alphabets.####
