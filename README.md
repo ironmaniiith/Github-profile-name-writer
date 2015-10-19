@@ -3,6 +3,7 @@ Write you name using the github commits and make your profile awesome. :D
 
 
 If you don't enjoying reading, then just follow this and enjoy. :D
+
 1.	Make a new repo (say testRepo)
 2.	Run the file run.sh, it will ask you the information like username and id, enter it.
 3.	You will obtain	a file runThis.sh, just copy that file in your cloned version of testRepo and run it, that's all...
