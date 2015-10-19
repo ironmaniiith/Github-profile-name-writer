@@ -1,4 +1,4 @@
-# Github-profile-name-writer
+# Github-profile-name-writerg
 ###Write you name using the github commits and make your profile awesome. :D###
 ##LIKE THIS##
 ![Image of Ironman on github Profile](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/ironmanGithub.jpg)
@@ -41,11 +41,13 @@ For help, here are two screenshots
 * No not at all.. hahhahahahahaha. :D, it's just for fun and for making your github profile awesome, go see this link -> https://github.com/ironmaniiith
 
 #### If you are in college and your college don't allow ssh to github, follow this####
-* Suppose you username is 'ironman' and password is 'blabla'
+* Suppose you username is 'ironman' and password is 'blablapassword'
 	
 	Just run this in you local copy of the repository
 
-	git remote add origin "https://ironman:blabla@github.com/ironman/testRepo.git" (where testRepo is the name of you repository)
+	git remote rm origin
+
+	git remote add origin "https://ironman:blablapassword@github.com/ironman/testRepo.git" (where testRepo is the name of you repository in which your commits will be going)
 	
 	Now just run the final script runThis.sh, it won't ask for the password
 
