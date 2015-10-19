@@ -1,2 +1,4 @@
 todo
 *.tmp
+runThis*
+*.pyc
