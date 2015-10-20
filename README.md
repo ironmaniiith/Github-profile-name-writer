@@ -34,7 +34,8 @@ For help, here are two screenshots
 
 
 #### What about numbers.?####
-* ~~~I'll add them soon, but you know what, you can also fork the repository, go give it a shot.~~~
+* ~~I'll add them soon, but you know what, you can also fork the repository, go give it a shot.~~
+
 Edit :- Numbers are added.
 
 #### Is this a useful thing..?####
