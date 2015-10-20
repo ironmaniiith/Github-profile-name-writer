@@ -1,13 +1,13 @@
-# Github-profile-name-writer  [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/ironmaniiith)
-###Write you name using the github commits and make your profile awesome. :D###
+# Github-profile-name-writer  [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com//ironmaniiith/Github-profile-name-writer/star)
+###Write you name using the github commits and make your profile awesome. :wink: ###
 ###LIKE THIS###
 ![Image of Ironman on github Profile](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/ironmanGithub.jpg)
 
-####If you don't enjoy reading, then just follow this and enjoy. :D
+####If you don't enjoy reading, then just follow this :arrow_down: and enjoy. :sunglasses:
 
-1.	Make a new repo (say testRepo)
-2.	Run the file run.sh, it will ask you the information like username and id, enter it.
-3.	You will obtain	a file runThis.sh, just copy that file in your cloned version of testRepo and run it, that's all...
+:one:	Make a new repo (say testRepo)
+:two:	Run the file run.sh, it will ask you the information like username and id, enter it.
+:three:	You will obtain	a file runThis.sh, just copy that file in your cloned version of testRepo and run it, that's all...
 
 
 For other related queries refer this
@@ -30,7 +30,7 @@ For help, here are two screenshots
 
 
 #### What if I want to change the pattern of some alphabets.####
-* Now that's simple, go to the components folder, you will find a file named alphabets, just draw your pattern in that file, run bash parse.sh and that's it, your final output is in finalIndexing.txt, just replace all this obtained value of variables and arrays in the file main.py (replacing the old one). Now what are you waiting for, go and run your newly customized main.py. ;-)
+* Now that's simple, go to the components folder, you will find a file named alphabets, just draw your pattern in that file, run bash parse.sh and that's it, your final output is in finalIndexing.txt, just replace all this obtained value of variables and arrays in the file main.py (replacing the old one). Now what are you waiting for, go and run your newly customized main.py. :stuck_out_tongue_winking_eye:
 
 
 #### What about numbers.?####
@@ -53,7 +53,7 @@ Edit :- Numbers are added.
 	Now just run the final script runThis.sh, it won't ask for the password
 
 #### What more.?####
-* Well dude, I'm not a poet or essay writer, so unfortunately you won't find anything more. ;-)
+* Well dude, I'm not a poet or essay writer :smile: , so unfortunately you won't find anything more. ;-)
 
 Any suggestions are always welcomed.
 
@@ -62,3 +62,4 @@ Don't forget to star the repo if you like it...
 Ironmaniiith
 
 https://github.com/ironmaniiith
+/play tada
