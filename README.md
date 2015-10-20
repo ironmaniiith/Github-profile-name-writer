@@ -34,8 +34,8 @@ For help, here are two screenshots
 
 
 #### What about numbers.?####
-* I'll add them soon, but you know what, you can also fork the repository, go give it a shot. :D
-
+* ~~~I'll add them soon, but you know what, you can also fork the repository, go give it a shot.~~~
+Edit :- Numbers are added.
 
 #### Is this a useful thing..?####
 * No not at all.. hahhahahahahaha. :D, it's just for fun and for making your github profile awesome, go see this link -> https://github.com/ironmaniiith
