@@ -32,7 +32,7 @@ For help, here are two screenshots
 
 
 #### What if I want to change the pattern of some alphabets.####
-* Now that's simple, go to the components folder, you will find a file named alphabets, just draw your pattern in that file, run bash parse.sh and that's it, your final output is in finalIndexing.txt, just replace all this obtained value of variables and arrays in the file main.py (replacing the old one). Now what are you waiting for, go and run your newly customized main.py. :stuck_out_tongue_winking_eye:
+* Now that's simple, go to the components folder, you will find a file named alphabets, just draw your pattern in that file, run bash parse.sh and that's it, your final output is in finalIndexing.txt, just replace all this obtained value of variables and arrays in the file main.py (replacing the old one). Now what are you waiting for, go and run your newly customized main.py. :smile:
 
 
 #### What about numbers.?####
@@ -55,7 +55,7 @@ Edit :- Numbers are added.
 	Now just run the final script runThis.sh, it won't ask for the password
 
 #### What more.?####
-* Well dude, I'm not a poet or essay writer :smile: , so unfortunately you won't find anything more. ;-)
+* Well dude, I'm not a poet or essay writer :stuck_out_tongue_winking_eye: , so unfortunately you won't find anything more. ;-)
 
 Any suggestions are always welcomed.
 
