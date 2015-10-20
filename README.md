@@ -6,7 +6,9 @@
 ####If you don't enjoy reading, then just follow this :arrow_down: and enjoy. :sunglasses:
 
 :one:	Make a new repo (say testRepo)
+
 :two:	Run the file run.sh, it will ask you the information like username and id, enter it.
+
 :three:	You will obtain	a file runThis.sh, just copy that file in your cloned version of testRepo and run it, that's all...
 
 
