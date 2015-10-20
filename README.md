@@ -1,4 +1,4 @@
-# Github-profile-name-writer
+# Github-profile-name-writer[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 ###Write you name using the github commits and make your profile awesome. :D###
 ###LIKE THIS###
 ![Image of Ironman on github Profile](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/ironmanGithub.jpg)
