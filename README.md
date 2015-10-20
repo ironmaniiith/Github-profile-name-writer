@@ -1,6 +1,6 @@
 # Github-profile-name-writer  [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com//ironmaniiith/Github-profile-name-writer/star)
 ###Write you name using the github commits and make your profile awesome. :wink: ###
-###LIKE THIS###
+###LIKE THIS :arrow_heading_down:###
 ![Image of Ironman on github Profile](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/ironmanGithub.jpg)
 
 ####If you don't enjoy reading, then just follow this :arrow_down: and enjoy. :sunglasses:
