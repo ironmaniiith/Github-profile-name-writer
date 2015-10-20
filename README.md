@@ -3,7 +3,7 @@
 ###Like This :arrow_heading_down:###
 ![Image of Ironman on github Profile](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/ironmanGithub.jpg)
 
-####If you don't enjoy reading, then just follow this :arrow_down: and enjoy. :sunglasses:
+####If you don't like reading, then just follow this :arrow_down: and enjoy. :sunglasses:
 
 :one:	Make a new repo (say testRepo)
 
