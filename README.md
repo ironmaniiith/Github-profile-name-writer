@@ -59,7 +59,7 @@ Edit :- Numbers are added.
 
 Any suggestions are always welcomed.
 
-Don't forget to star the repo if you like it...
+Don't forget to :star:star:star: the repo if you like it...
 
 Ironmaniiith
 
