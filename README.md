@@ -23,9 +23,9 @@ The first quantity is year, second is month and third is date, just add these in
 
 For help, here are two screenshots
 
-1. Base date (Your name will appear above this date's level)
+1. **Base date** (Your name will appear above this date's level)
 ![Image of Base Date](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/baseDate.jpg)
-2. Inspect Element to find date.
+2. **Inspect Element** to find date.
 ![Image of Inspect Date](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/inspectDate.jpg)
 
 
