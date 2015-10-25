@@ -8,7 +8,7 @@ from finalIndexing import *
 # then the folder components is for you. :D
 ###########
 
-
+allowedChar = [' '] #More to add
 user = raw_input("Enter the github username:- ")
 email = raw_input("Enter the registered github email id:- ")
 print "Now you need to enter the date from which you want to start writing your name"
@@ -22,10 +22,11 @@ name=raw_input("Enter the name (currently supports only name and space):- ")
 num = int(raw_input("How many commits do you want per day (more commits, darker color)..:- "))
 startingDate = datetime.datetime(year, mon, day)
 
-
 for word in name:
-	text = "arr" + word.upper()
-	if text != 'arr ':
+	if word.isalnum() == False and word not in allowedChar:
+		print "The character " + str(word) + " is not yet released"
+	elif word != ' ':
+		text = "arr" + word.upper()
 		increment = eval('increment' + word.upper())
 		print word
 		myArray = eval(text)
