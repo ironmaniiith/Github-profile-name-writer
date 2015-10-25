@@ -25,7 +25,7 @@ startingDate = datetime.datetime(year, mon, day)
 
 for word in name:
 	text = "arr" + word.upper()
-	if text != ' ':
+	if text != 'arr ':
 		increment = eval('increment' + word.upper())
 		print word
 		myArray = eval(text)
@@ -39,5 +39,6 @@ for word in name:
 				f.write('for i in `seq 1 ' + str(num) + '`;do ' +  final+ '; done' + '\n')
 		startingDate = startingDate + datetime.timedelta(days=increment*7)
 	else:
+		print ""
 		startingDate = startingDate + datetime.timedelta(days=1)
 print "Go and execute the file runThis.sh in your repository"
