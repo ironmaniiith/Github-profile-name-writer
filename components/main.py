@@ -18,7 +18,7 @@ time.sleep(1)
 year = int(raw_input("Enter the year:- "))
 mon = int(raw_input("Enter the month:- "))
 day = int(raw_input("Enter the day:- "))
-name=raw_input("Enter the name (currently supports only name and space):- ")
+name=raw_input("Enter the name (only alphabets, numbers and space supported for now):- ")
 num = int(raw_input("How many commits do you want per day (more commits, darker color)..:- "))
 startingDate = datetime.datetime(year, mon, day)
 
