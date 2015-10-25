@@ -41,5 +41,5 @@ for word in name:
 		startingDate = startingDate + datetime.timedelta(days=increment*7)
 	else:
 		print ""
-		startingDate = startingDate + datetime.timedelta(days=1)
+		startingDate = startingDate + datetime.timedelta(days=7)
 print "Go and execute the file runThis.sh in your repository"
