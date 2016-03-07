@@ -1,5 +1,8 @@
 Improve code structure (I really wrote this a long time ago :P)
 Don't ask user for the username and password, instead use git caching for pushing the commits
+Add number zero
+Add description for indexing.sh and how to use it
+Keep proper extensions for the files that are used :P
 Add helper class
 Resolve issue #4
 Add more special characters
