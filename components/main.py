@@ -1,4 +1,4 @@
-#1/usr/bin/python
+#!/usr/bin/python
 import datetime
 import random
 import time
