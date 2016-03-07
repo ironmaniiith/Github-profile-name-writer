@@ -1,0 +1,7 @@
+Improve code structure (I really wrote this a long time ago :P)
+Don't ask user for the username and password, instead use git caching for pushing the commits
+Add helper class
+Resolve issue #4
+Add more special characters
+Add try catch wherever necessary
+Add pause and continue later functionality
