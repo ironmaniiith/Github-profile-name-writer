@@ -11,6 +11,7 @@ Refer to folder components for generating different patterns.
 GLOBALS = {
 	'FORCE_PUSH' = True,
 }
+#### To make helper script and to define Helper class in it
 
 class User():
 	"""
