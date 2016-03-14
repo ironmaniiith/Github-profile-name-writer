@@ -126,7 +126,7 @@ INFO = {
 	'no_of_commits' : 5,
 }
 
-allowedChar = [' '] # Add more in future
+allowedChars = [' '] # Add more in future
 
 print '\nEnter the Base Date.'
 print '<(For more details or to know how to find Base Date, refer README.md)>'
