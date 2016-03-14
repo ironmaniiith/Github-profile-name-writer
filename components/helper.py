@@ -62,4 +62,4 @@ class Helper():
 
 		process = Popen(command, shell=True, stdout=PIPE)
 		output = process.communicate()
-		return output
+		return output[0].strip()
