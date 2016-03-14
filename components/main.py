@@ -149,7 +149,10 @@ startingDate = datetime.datetime(base_date['year'], base_date['month'], base_dat
 
 for alphabet in INFO['profileName']:
 	time.sleep(0.1)
-	if alphabet != ' ':
+
+	if (not alphabet.isalnum()) and (alphabet not in allowedChars):
+		print 'Tha character {0} is not yet released'.format(str(alphabet))
+	elif alphabet !== ' ':
 		myArray = eval('arr' + alphabet.upper())
 		increment = eval('increment' + alphabet.upper())
 
