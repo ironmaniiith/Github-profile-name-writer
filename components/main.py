@@ -1,15 +1,16 @@
 #!/usr/bin/python
 import datetime, random, time, os
 from finalIndexing import *
-from helper import *
+from helper import Helper
 from subprocess import Popen, PIPE
 
 """
 Refer to folder components for generating different patterns.
 """
 
+helper = Helper()
 GLOBALS = {
-	'FORCE_PUSH' = True,
+	'FORCE_PUSH' : True,
 }
 #### To make helper script and to define Helper class in it
 
@@ -19,68 +20,78 @@ class User():
 	"""
 
 	def __init__(self):
-		self.__userName = 'ironmaniiith'
-		self.__emailId = 'aalekhj2507@gmail.com'
-		self.__profileName = 'Aalekh Jain'
-		self.__name__()
-		self.__email__()
-		self.__profile__()
-
-	def getUserInfo(self, infoType):
 		"""
-			Extract the information from git config
+			The next three lines are for just an example.
+		"""
+		self._userName = 'ironmaniiith' # Username used for logging into github account
+		self._emailId = 'aalekhj2507@gmail.com' # Registered email id on github
+		self._profileName = 'Aalekh Jain' # The name that needs to be written on the github profile with above userName and emailId
+
+		self.__set_username__()
+		self.__set_emailid__()
+		self.__set_profile_name__()
+
+	def getUserInfo(self, configInfo):
+		"""
+			Generalized functions that server the purpose the following puspose for __username__, __email__, and __profile__
+
+			# Extract and returns user information from:
+				1. Global config file.
+				2. Local config file.
+				3. System config file.
+			If all of the above fails, returns an empty string.
+
+			Return type: String
 		"""
 
-		command = 'git config{0}user.{1}'
-		globalUserConfig = command.format(' --global ', infoType)
-		output = helper.getCommandOutput(globalUserConfig)
+		# Extract the information from global git config
+		command = 'git config {0} user.{1}'
+		configLocations = ['--global', '--local', '--system']
 
-		if len(output):
-			return output.strip()
+		for location in configLocations:
+			userConfig = command.format(location, configInfo)
+			output = helper.getCommandOutput(userConfig)
+			if len(output):
+				return output.strip()
 
-		# If global config is not set, try for local config
-
-		localUserConfig = command.format(' ', infoType)
-		output = helper.getCommandOutput(localUserConfig)
-		if len(output):
-			return output.strip()
+		# Returns an empty string if both local and global config are not available
 		return ''
 
-	def __name__(self):
+	def __set_username__(self):
 		"""
-			set the value for self._username
+			set user's github username (self.__userName)
 			Return type: NoneType
 		"""
 		print 'Enter your github username: ',
 
 		info = self.getUserInfo('name')
 		if len(info):
-			self.__userName = info
-			print '\n<default: {0}>: '.format(info)
+			self._userName = info
+			print '\n<default: {0}>: '.format(info),
 
 		info = raw_input()
 		if len(info.strip()):
-			self.__userName = info
+			self._userName = info
 
 		# return 'Aalekh Jain'
 
-	def __email__(self):
+	def __set_emailid__(self):
 		"""
-			set user's github emailId
+			set user's github emailId (self.__emailId)
 			Return type: NoneType
 		"""
-		print 'Enter your github emailId: '
+		print 'Enter your github emailId: ',
 		
 		info = self.getUserInfo('email')
 		if len(info):
-			self.__emailId = info
-			print '\n<default: {0}>: '.format(info)
+			self._emailId = info
+			print '\n<default: {0}>: '.format(info),
 
 		info = raw_input()
 		if len(info):
-			self.__emailId = info
+			self._emailId = info
 
-	def __profile__(self):
+	def __set_profile_name__(self):
 		"""
 			set user's profile name
 			Return type: NoneType
@@ -89,7 +100,7 @@ class User():
 		
 		info = raw_input()
 		if len(info) : # TODO: check here for a valid profile name
-			self.__profileName = info
+			self._profileName = info
 		else:
 			print '<InvalidName Error>'
 			self.__profile__()
@@ -101,12 +112,12 @@ user = User()
 # Default info
 INFO = {
 	# Fetch the default information from git config
-	'user.name': user.__userName,
-	'user.email': user.__emailId,
+	'user.name': user._userName,
+	'user.email': user._emailId,
 	'year': '1970', # TODO  -  Put
 	'month': '1', # TODO   --- Default
 	'day': '1', # TODO      -  Here
-	'name': raw_input("Please enter your name: "),
+	'name': user._profileName,
 	'no_of_commits': 5
 }
 
