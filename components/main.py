@@ -152,7 +152,7 @@ for alphabet in INFO['profileName']:
 
 	if (not alphabet.isalnum()) and (alphabet not in allowedChars):
 		print 'Tha character {0} is not yet released'.format(str(alphabet))
-	elif alphabet !== ' ':
+	elif alphabet != ' ':
 		myArray = eval('arr' + alphabet.upper())
 		increment = eval('increment' + alphabet.upper())
 
