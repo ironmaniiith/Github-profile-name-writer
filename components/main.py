@@ -1,17 +1,20 @@
 #!/usr/bin/python
-import datetime, random, time, os
+import datetime, random, time, os, sys
 from finalIndexing import *
 from helper import Helper
 from subprocess import Popen, PIPE
 
 """
-Refer to folder components for generating different patterns.
+	Refer to folder components for generating different patterns for alphabets and numbers.
 """
 
 helper = Helper()
+
 GLOBALS = {
 	'FORCE_PUSH' : True,
+	'DEFAULT_DAYS_INCREMENT' : 7,
 }
+
 #### To make helper script and to define Helper class in it
 
 class User():
@@ -72,15 +75,14 @@ class User():
 		info = raw_input()
 		if len(info.strip()):
 			self._userName = info
-
-		# return 'Aalekh Jain'
+		# 'ironmaniiith'
 
 	def __set_emailid__(self):
 		"""
 			set user's github emailId (self.__emailId)
 			Return type: NoneType
 		"""
-		print 'Enter your github emailId: ',
+		print 'Enter your registered github emailId: ',
 		
 		info = self.getUserInfo('email')
 		if len(info):
@@ -90,6 +92,7 @@ class User():
 		info = raw_input()
 		if len(info):
 			self._emailId = info
+		# 'aalekhj2507@gmail.com'
 
 	def __set_profile_name__(self):
 		"""
@@ -103,62 +106,77 @@ class User():
 			self._profileName = info
 		else:
 			print '<InvalidName Error>'
-			self.__profile__()
+			self.__set_profile_name__()
+		# 'Aalekh Jain'
 
 user = User()
 
 # ============================== TODO, add date class too which will contain the base date information
 
-# Default info
+# User Info
 INFO = {
-	# Fetch the default information from git config
-	'user.name': user._userName,
-	'user.email': user._emailId,
-	'year': '1970', # TODO  -  Put
-	'month': '1', # TODO   --- Default
-	'day': '1', # TODO      -  Here
-	'name': user._profileName,
-	'no_of_commits': 5
+	'userName' : user._userName,
+	'emailId' : user._emailId,
+	'profileName': user._profileName,
+	'BASE_DATE' : {
+		'year': 1970,
+		'month': 1,
+		'day': 1
+	},
+	'no_of_commits' : 5,
 }
 
 allowedChar = [' '] # Add more in future
-user = raw_input('Enter your github username: ')
-email = raw_input('Enter your registered github email id: ')
-print 'Enter the base date.'
-time.sleep(1)
-print '<(for more details or to know how to find base date, refer README.md)>'
-time.sleep(1)
+
+print '\nEnter the Base Date.'
+print '<(For more details or to know how to find Base Date, refer README.md)>'
 
 # TODO @@@@ Error handling to be done here
+base_date = INFO['BASE_DATE']
+
 # Ask for the base date information here
-year = int(raw_input('Enter year: '))
-month = int(raw_input('Enter month: '))
-day = int(raw_input('Enter day: '))
-name = raw_input("Enter the name to write on profile: ")
+# Also add feature for default date
+
+base_date['year'] = int(raw_input('Enter year: '))
+base_date['month'] = int(raw_input('Enter month: '))
+base_date['day'] = int(raw_input('Enter day: '))
+
 # TODO @@@@ Verify name here, also warn user for longer names that may not fit on profile
 # CheckName()
 
-num = int(raw_input('How many commits do you want per day\n<(more commits means darker color on the profile)>: '))
-startingDate = datetime.datetime(year, month, day)
+INFO['no_of_commits'] = int(raw_input('How many commits do you want per day:\n<(more commits means darker color on the profile)>: '))
+startingDate = datetime.datetime(base_date['year'], base_date['month'], base_date['day'])
 
-for alphabet in name:
+for alphabet in INFO['profileName']:
+	time.sleep(0.1)
 	if alphabet != ' ':
 		myArray = eval('arr' + alphabet.upper())
 		increment = eval('increment' + alphabet.upper())
-		print alphabet
-		for arr in myArray:
+
+		# Print the current alphabet for user
+		print alphabet,
+		sys.stdout.flush()
+
+		for i in myArray:
 			components = [None]*3
 			components[0] = 'echo ' + str(random.random()) + str(random.random()) + ' > testFile'
 			components[1] = 'git add .'
-			components[2] = 'git commit -m "blah blah" --amend --author="{0} <{1}> " --date="{2}"'.format(user, email, (startingDate + datetime.timedelta(days=i)).strftime("%A %B %d %Y"))
-			finalString = components.join('')
-			final = ';'.join(components)
+			components[2] = 'git commit -m "blah blah" --amend --author="{0} <{1}> " --date="{2}"'.format(
+								INFO['userName'],
+								INFO['emailId'],
+								(startingDate + datetime.timedelta(days=i)).strftime("%A %B %d %Y")
+							)
+			finalCommand = ';'.join(components)
+
 			if GLOBALS['FORCE_PUSH'] == True:
-				final += '; git push origin master --force'
+				finalCommand += '; git push origin master --force'
+
+			# Write the final constructed command in runThis.sh
 			with open('runThis.sh', 'a') as f:
-				f.write('for i in `seq 1 ' + str(num) + '`;do ' +  final+ '; done' + '\n')
-		startingDate = startingDate + datetime.timedelta(days=increment*7)
+				f.write('for i in `seq 1 ' + str(INFO['no_of_commits']) + '`;do ' +  finalCommand + '; done' + '\n')
+		startingDate += datetime.timedelta(days=increment*GLOBALS['DEFAULT_DAYS_INCREMENT'])
 	else:
-		print ''
-		startingDate = startingDate + datetime.timedelta(days=7)
-print 'Go and execute the file runThis.sh in your repository, enjoy :D'
+		print ' ',
+		startingDate += datetime.timedelta(days=GLOBALS['DEFAULT_DAYS_INCREMENT'])
+
+print '\nNow go and execute the file runThis.sh in your repository\nHave Fun :D'
