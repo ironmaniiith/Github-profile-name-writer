@@ -5,7 +5,7 @@ echo 'echo "Now just go and relax, you will be notified when the process is comp
 if  ls components/main.py >/dev/null 2>/dev/null ; then
 	python components/main.py
 	echo 'notify-send "Github Name Writer Process completed" 2>/dev/null' >> runThis.sh
-	echo 'Now just run the file runThis.sh in your test repository and enjoy..!!'
+	echo 'Task Completed...'
 else
 	echo 'Make sure you have all the files at correct places'
 fi
