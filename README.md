@@ -41,7 +41,7 @@ Edit :- Numbers are added.
 #### Is this a useful thing..?####
 * No not at all.. hahhahahahahaha. :D, it's just for fun and for making your github profile awesome, go see this link -> https://github.com/ironmaniiith
 
-#### If you are in college and your college don't allow ssh to github, follow this####
+#### If you are behind a proxy and your proxy don't allow ssh to github, follow this####
 * Suppose you username is 'ironman' and password is 'blablapassword'
 	
 	Just run this in you local copy of the repository
