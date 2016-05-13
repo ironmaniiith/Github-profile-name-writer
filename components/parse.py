@@ -1,17 +1,47 @@
-#!/usr/bin/python
 import sys
+
+"""
+	First Line  : Enter the alphabet, number or special character.
+	Second Line : Now enter the dimensions of the rectangle (n and m) that the above text will take.
+	Next Lines	: Next enter the representation of the text of the given dimension...
+	Following example will make it clear:
+	
+	Brace yourself, examples are coming :P
+=======================================
+	5
+	5 5
+	*****
+	*
+	*****
+	    *
+	*****
+=======================================
+	T
+	5 5
+	*****
+	  *  
+	  *  
+	  *  
+	  *  
+=======================================
+
+"""
+
 text = raw_input()
 numbers = raw_input()
-n = int(numbers.split(' ')[0])
-m = int(numbers.split(' ')[1])
+numbers = map(int, numbers.split(' '))
+n = numbers[0]
+m = numbers[1]
 arr = []
-for x in xrange(0,n):
+
+for x in xrange(0, n):
 	test = raw_input()
-	# test = test.split(' ')
 	arr.append(test)
 arr.reverse()
 ans = []
-# print arr
+
+
+# Index the arrays according to github dates
 for i,line in enumerate(arr):
 	index = -i
 	for j,alpha in enumerate(line):
@@ -19,11 +49,5 @@ for i,line in enumerate(arr):
 			ans.append(j*7 + index)
 ans.sort()
 
-try:
-	number = int(text)
-	print "arr" + text + " = " + str(ans)
-	print "increment" + text + " = " + str(m+1)
-except Exception, e:
-	alphabet = text
-	print "arr" + alphabet + " = " + str(ans)
-	print "increment" + alphabet + " = " + str(m+1)
+print "arr" + text + " = " + str(ans)
+print "increment" + text + " = " + str(m+1)
