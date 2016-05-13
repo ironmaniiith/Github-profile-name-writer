@@ -1,4 +1,3 @@
-#!/usr/bin/python
 import datetime, random, time, os, sys
 from finalIndexing import *
 from helper import Helper

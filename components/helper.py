@@ -1,14 +1,14 @@
 import hashlib, os, sys, random
 import collections, itertools, operator, inspect, re
-from subprocess import Popen, PIPE
+import subprocess
 
 class Helper():
 	"""
 		This class is for other helper functions used in main
 	"""
 
-	def __init__(self):
-		pass
+	def __init__(self, wordsOfGod):
+		self.wordsOfGod = wordsOfGod # :P :V
 
 	def pathExists(self, a):
 		"""
@@ -60,6 +60,21 @@ class Helper():
 			Return type: String
 		"""
 
-		process = Popen(command, shell=True, stdout=PIPE)
+		process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
 		output = process.communicate()
 		return output[0].strip()
+
+	def typer(self, text, maxTime=None):
+		"""
+			Hey, this is my friend who helps me in typing, isn't the name itself self explanatory :P
+		"""
+
+		defaultTimeGap = 0.05
+		if maxTime != None:
+			newTime = maxTime/(len(text) * 0.1)
+			if newTime < defaultTimeGap:
+				defaultTimeGap = newTime
+		for char in text:
+			sys.stdout.write(char)
+			sys.stdout.flush() # Flush it write now :P
+			time.sleep(defaultTimeGap)
