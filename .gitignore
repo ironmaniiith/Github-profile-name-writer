@@ -1,4 +1,5 @@
 todo
 *.tmp
 runThis*
+writer*
 *.pyc
