@@ -2,12 +2,12 @@ import hashlib, os, sys, random
 import collections, itertools, operator, inspect, re
 import subprocess
 
-class Helper():
+class Helper:
 	"""
 		This class is for other helper functions used in main
 	"""
 
-	def __init__(self, wordsOfGod):
+	def __init__(self, wordsOfGod='I am the Ironman..!!'):
 		self.wordsOfGod = wordsOfGod # :P :V
 
 	def pathExists(self, a):

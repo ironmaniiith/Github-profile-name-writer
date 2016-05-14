@@ -7,35 +7,36 @@ from subprocess import Popen, PIPE
 	Refer to folder components for generating different patterns for alphabets and numbers.
 """
 
-helper = Helper()
+helper = Helper('I am the Ironman..!!')
 
 GLOBALS = {
 	'FORCE_PUSH' : True,
 	'DEFAULT_DAYS_INCREMENT' : 7,
+	'WRITER_FILE': 'writer.sh',
 }
 
-#### To make helper script and to define Helper class in it
-
-class User():
+class User:
 	"""
 		Class storing the default user info
 	"""
 
 	def __init__(self):
+		
 		"""
-			The next three lines are for just an example.
+			The next three lines are just for an example.
 		"""
 		self._userName = 'ironmaniiith' # Username used for logging into github account
 		self._emailId = 'aalekhj2507@gmail.com' # Registered email id on github
-		self._profileName = 'Aalekh Jain' # The name that needs to be written on the github profile with above userName and emailId
+		self._profileName = 'Aalekh Jain' # The name that needs to be written on the corresponding github profile
 
 		self.__set_username__()
 		self.__set_emailid__()
 		self.__set_profile_name__()
 
 	def getUserInfo(self, configInfo):
+		
 		"""
-			Generalized functions that server the purpose the following puspose for __username__, __email__, and __profile__
+			Generalized functions that serve the following purpose for __username__, __email__, and __profile__
 
 			# Extract and returns user information from:
 				1. Global config file.
@@ -56,12 +57,12 @@ class User():
 			if len(output):
 				return output.strip()
 
-		# Returns an empty string if both local and global config are not available
+		# Returns an empty string if the above configs are not available
 		return ''
 
 	def __set_username__(self):
 		"""
-			set user's github username (self.__userName)
+			set user's github username (self._userName)
 			Return type: NoneType
 		"""
 		print 'Enter your github username: ',
@@ -110,40 +111,84 @@ class User():
 
 user = User()
 
-# ============================== TODO, add date class too which will contain the base date information
+class Date:
+	"""
+		Class storing default date info
+	"""
+
+	def __init__(self):
+	
+		self.setDefaultDate()
+		print '\nEnter the Base Date in the format (YY-MM-DD).'
+		print '<(For more details or to know how to find Base Date, refer README.md)>',
+		self.setBaseDate()
+
+	def setDefaultDate(self):
+		"""
+			Procedure for setting the default date:
+				1. Find the date corresponding to exactly one year back.
+				2. Add three weeks to that date and find the nearest Sunday after this day (ceiling function wrt Sunday :P ).
+				3. Set the default base date as the date corresponding to one day less than this Sunday (according to the requirements, base date need to start from a Saturday)
+		"""
+		
+		self.now = datetime.datetime.now()
+		self.oldDate = self.now - datetime.timedelta(days=365-3*7)
+		
+		diffSunday = 6 - self.oldDate.weekday() # Difference with the nearest Sunday after this day
+
+		self.defaultDate = self.oldDate + datetime.timedelta(days=diffSunday-1) # Base date need to start from Saturday, hence -1
+
+		self.year = self.defaultDate.year
+		self.month = self.defaultDate.month
+		self.day = self.defaultDate.day
+
+	def setBaseDate(self):
+		print '\n<default: {0}>: '.format(self.defaultDate.strftime('%Y-%m-%d')),
+
+		info = raw_input()
+		if len(info):
+			info = info.strip('-')
+			try:
+				self.year = int(info[0])
+				self.month = int(info[1])
+				self.day = int(info[2])
+				datetime.datetime(year=self.year, month=self.month, day=self.day)
+			except Exception:
+				print 'Please enter a valid Base Date (leave blank for using Default Date)'
+				self.setBaseDate()
+
+	def getBaseDate(self):
+		return {
+			'year' : self.year,
+			'month' : self.month,
+			'day' : self.day
+		}
+
+date = Date()
+base_date = date.getBaseDate()
 
 # User Info
 INFO = {
 	'userName' : user._userName,
 	'emailId' : user._emailId,
 	'profileName': user._profileName,
-	'BASE_DATE' : {
-		'year': 1970,
-		'month': 1,
-		'day': 1
-	},
 	'no_of_commits' : 5,
 }
-
-allowedChars = [' '] # Add more in future
-
-print '\nEnter the Base Date.'
-print '<(For more details or to know how to find Base Date, refer README.md)>'
-
-# TODO @@@@ Error handling to be done here
-base_date = INFO['BASE_DATE']
-
-# Ask for the base date information here
-# Also add feature for default date
-
-base_date['year'] = int(raw_input('Enter year: '))
-base_date['month'] = int(raw_input('Enter month: '))
-base_date['day'] = int(raw_input('Enter day: '))
+allowedChars = [' ']
 
 # TODO @@@@ Verify name here, also warn user for longer names that may not fit on profile
 # CheckName()
 
-INFO['no_of_commits'] = int(raw_input('How many commits do you want per day:\n<(more commits means darker color on the profile)>: '))
+
+# Get the info for number of commits here
+info = raw_input('Number of commits per day:\n<default: 5>: ')
+if len(info):
+	try:
+		info = int(info)
+		INFO['no_of_commits'] = info
+	except Exception:
+		pass
+
 startingDate = datetime.datetime(base_date['year'], base_date['month'], base_date['day'])
 
 for alphabet in INFO['profileName']:
@@ -174,11 +219,11 @@ for alphabet in INFO['profileName']:
 				finalCommand += '; git push origin master --force'
 
 			# Write the final constructed command in runThis.sh
-			with open('runThis.sh', 'a') as f:
+			with open(GLOBALS['WRITER_FILE'], 'a') as f:
 				f.write('for i in `seq 1 ' + str(INFO['no_of_commits']) + '`;do ' +  finalCommand + '; done' + '\n')
 		startingDate += datetime.timedelta(days=increment*GLOBALS['DEFAULT_DAYS_INCREMENT'])
 	else:
 		print ' ',
 		startingDate += datetime.timedelta(days=GLOBALS['DEFAULT_DAYS_INCREMENT'])
 
-print '\nNow go and execute the file runThis.sh in your repository\nHave Fun :D'
+print '\nNow go and execute the file {0} in your repository\nHave Fun :D'.format(GLOBALS['WRITER_FILE'])
