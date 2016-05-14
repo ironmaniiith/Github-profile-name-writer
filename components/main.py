@@ -174,7 +174,8 @@ INFO = {
 	'profileName': user._profileName,
 	'no_of_commits' : 5,
 }
-allowedChars = [' ']
+
+allowedChars = [' '] # Add more in future
 
 # TODO @@@@ Verify name here, also warn user for longer names that may not fit on profile
 # CheckName()
@@ -218,7 +219,7 @@ for alphabet in INFO['profileName']:
 			if GLOBALS['FORCE_PUSH'] == True:
 				finalCommand += '; git push origin master --force'
 
-			# Write the final constructed command in runThis.sh
+			# Write the final constructed command in GLOBALS['WRITER_FILE']
 			with open(GLOBALS['WRITER_FILE'], 'a') as f:
 				f.write('for i in `seq 1 ' + str(INFO['no_of_commits']) + '`;do ' +  finalCommand + '; done' + '\n')
 		startingDate += datetime.timedelta(days=increment*GLOBALS['DEFAULT_DAYS_INCREMENT'])
