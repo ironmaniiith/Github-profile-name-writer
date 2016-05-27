@@ -147,7 +147,7 @@ class Date:
 
 		info = raw_input()
 		if len(info):
-			info = info.strip('-')
+			info = info.split('-')
 			try:
 				self.year = int(info[0])
 				self.month = int(info[1])
