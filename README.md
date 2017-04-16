@@ -1,9 +1,9 @@
 # Github-profile-name-writer  [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com//ironmaniiith/Github-profile-name-writer/star)
-###Write you name using the github commits and make your profile awesome. :wink: ###
-###Like This :arrow_heading_down:###
+### Write you name using the github commits and make your profile awesome. :wink:  ###
+### Like This :arrow_heading_down: ###
 ![Image of Ironman on github Profile](https://github.com/ironmaniiith/Github-profile-name-writer/blob/master/extras/ironmanGithub.jpg)
 
-####If you don't like reading, then just follow this :arrow_down: and enjoy. :sunglasses:
+#### If you don't like reading, then just follow this :arrow_down: and enjoy. :sunglasses:
 
 1.	Make a new repo (say testRepo)
 2.	Run the file run.sh, it will ask you the information like username and id, enter it.
